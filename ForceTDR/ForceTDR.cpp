@@ -13,8 +13,7 @@ int main()
 	dev->CreateComputeShader(ComputeShader, sizeof(ComputeShader), nullptr, &cs); // from compiled cs.h
 	con->CSSetShader(cs, nullptr, 0);
 	con->Dispatch(256, 1, 1);
-	con->Flush(); // hangs then TDRs
+	con->Flush(); // hangs, then TDRs
 	return 0;
-
 }
 

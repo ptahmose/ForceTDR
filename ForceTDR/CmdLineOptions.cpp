@@ -2,14 +2,15 @@
 #include "CmdLineOptions.h"
 
 CCmdLineOptions::CCmdLineOptions()
-	: listDevicesCommand(false)
+	: listDevicesCommand(false), forceTdrCommand(false), listDX11FeaturesCommand(false)
 {
 	this->anyOption.addUsage("");
 	this->anyOption.addUsage("Usage: ");
 	this->anyOption.addUsage("");
 	this->anyOption.addUsage(" -h  --help  		 Prints this help ");
-	this->anyOption.addUsage(" -f  --forcetdr    Force a TDR ");
+	this->anyOption.addUsage(" -t  --forcetdr    Force a TDR ");
 	this->anyOption.addUsage(" -l  --listdevices Prints a list of available devices");
+	this->anyOption.addUsage(" -f  --listfeatures Prints DX11-features");
 	this->anyOption.addUsage("");
 
 	this->anyOption.setFlag("help", 'h');   /* a flag (takes no argument), supporting long and short form */
@@ -32,11 +33,15 @@ bool CCmdLineOptions::ParseCmdline(int argc, char* argv[])
 		this->listDevicesCommand = true;
 	}
 
-	if (this->anyOption.getFlag('f') || this->anyOption.getFlag("forcetdr"))
+	if (this->anyOption.getFlag('t') || this->anyOption.getFlag("forcetdr"))
 	{
-		this->listDevicesCommand = true;
+		this->forceTdrCommand = true;
 	}
 
+	if (this->anyOption.getFlag('f') || this->anyOption.getFlag("listfeatures"))
+	{
+		this->listDX11FeaturesCommand = true;
+	}
 
 	return true;
 }

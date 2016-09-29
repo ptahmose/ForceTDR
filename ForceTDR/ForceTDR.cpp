@@ -77,6 +77,8 @@ void Do_ListDevices(const CCmdLineOptions& opts)
 	}
 }
 
+
+
 void Do_ForceTDR(const CCmdLineOptions& opts)
 {
 	ID3D11Device* dev = nullptr;

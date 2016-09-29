@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\options">
+      <UniqueIdentifier>{91e7565f-28fc-4b6a-bbe8-bcde7c735dcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\options">
+      <UniqueIdentifier>{7c1a3b96-fdba-4c71-b77e-5e2494c3aa11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utilities">
+      <UniqueIdentifier>{8fbeec87-2dfe-4e6c-8620-8bbc3b8e4b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{29a22d07-be1b-492e-8afa-c255b9913687}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,6 +33,15 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="anyoption.h">
+      <Filter>Header Files\options</Filter>
+    </ClInclude>
+    <ClInclude Include="CmdLineOptions.h">
+      <Filter>Header Files\options</Filter>
+    </ClInclude>
+    <ClInclude Include="utilities.h">
+      <Filter>Header Files\Utilities</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -28,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="ForceTDR.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="anyoption.cpp">
+      <Filter>Source Files\options</Filter>
+    </ClCompile>
+    <ClCompile Include="CmdLineOptions.cpp">
+      <Filter>Source Files\options</Filter>
+    </ClCompile>
+    <ClCompile Include="utilities.cpp">
+      <Filter>Source Files\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

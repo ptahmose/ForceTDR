@@ -7,7 +7,7 @@ CCmdLineOptions::CCmdLineOptions()
 	this->anyOption.addUsage("");
 	this->anyOption.addUsage("Usage: ");
 	this->anyOption.addUsage("");
-	this->anyOption.addUsage(" -h  --help  		 Prints this help ");
+	this->anyOption.addUsage(" -h  --help  	     Prints this help ");
 	this->anyOption.addUsage(" -t  --forcetdr    Force a TDR ");
 	this->anyOption.addUsage(" -l  --listdevices Prints a list of available devices");
 	this->anyOption.addUsage(" -f  --listfeatures Prints DX11-features");
@@ -15,7 +15,8 @@ CCmdLineOptions::CCmdLineOptions()
 
 	this->anyOption.setFlag("help", 'h');   /* a flag (takes no argument), supporting long and short form */
 	this->anyOption.setFlag("listdevices", 'l');
-	this->anyOption.setFlag("forcetdr", 'f');
+	this->anyOption.setFlag("forcetdr", 't');
+	this->anyOption.setFlag("listfeatures", 'f');
 }
 
 bool CCmdLineOptions::ParseCmdline(int argc, char* argv[])

@@ -77,7 +77,20 @@ void Do_ListDevices(const CCmdLineOptions& opts)
 	}
 }
 
+static void PrintFeatures(ID3D11Device* device)
+{
+	HRESULT hr;
+	D3D11_FEATURE_DATA_THREADING dataThreading;
+	hr = device->CheckFeatureSupport(D3D11_FEATURE_THREADING, &dataThreading, sizeof(dataThreading));
 
+	D3D11_FEATURE_DATA_DOUBLES dataDoubles;
+	hr = device->CheckFeatureSupport(D3D11_FEATURE_DOUBLES, &dataDoubles, sizeof(dataDoubles));
+}
+
+void Do_ListDX11Features(const CCmdLineOptions& opts)
+{
+
+}
 
 void Do_ForceTDR(const CCmdLineOptions& opts)
 {
